@@ -164,6 +164,7 @@ class RangesIO
 		pos += diff
 		len -= diff
 		loop do
+			break if pos.nil?
 			@io.seek pos
 			if limit < len
 				s = @io.read(limit).to_s
@@ -210,6 +211,7 @@ class RangesIO
 		pos += diff
 		len -= diff
 		loop do
+			break if pos.nil?
 			@io.seek pos
 			if data_pos + len > data.length
 				chunk = data[data_pos..-1]
