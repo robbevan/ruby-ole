@@ -1,10 +1,10 @@
 lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
- 
+
 require 'ole/storage'
 
-PKG_NAME = 'ruby-ole'
-PKG_VERSION = Ole::Storage::VERSION
+PKG_NAME = 'ruby-ole' unless defined?(PKG_NAME)
+PKG_VERSION = Ole::Storage::VERSION unless defined?(PKG_VERSION)
 
 Gem::Specification.new do |s|
 	s.name = PKG_NAME
